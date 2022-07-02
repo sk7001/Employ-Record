@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct  EMP
+{
+  int   eno;
+  char  ename[20];
+  int sal;
+ };
+
+ main()
+ {
+   struct  EMP  e[20];
+   int  n,i;
+   clrscr();
+   printf("\n Enter how many employees do you want : ");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+  {
+     printf("\n Enter # %d Employee Record information : \n",i+1);
+     printf("\n Eno : ");
+   scanf("%d",&e[i].eno);
+   printf("\n Ename : ");
+   scanf("%s",&e[i].ename);
+   printf("\n Salary : ");
+   scanf("%d",&e[i].sal);
+   }
+   printf("\n Now print all N Employees Records :\n");
+
+   for(i=0;i<n;i++)
+   {
+     printf("\n **** AMC Computer Employee Records *****\n");
+     printf("\ Rec# %d Employee information :\n",i+1);
+   printf("\n Employee Number      : %d",e[i].eno);
+   printf("\n Name of the Employee : %s",e[i].ename);
+   printf("\n Salary               : %d",e[i].sal);
+   printf("\n -------------------------------------------");
+   }
+     getch();
+   }
